@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Event Timeline</title>
+    <script src="https://kit.fontawesome.com/b37c4f4d8b.js"></script>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Events</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-university"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Updates</a>
+              </li>
+            </ul>
+            <button class="btn btn-primary ml-auto">Log In</button>
+        </div>
+    </nav>
+
+    <!-- FAB -->
+    <section class="myfab">
+        
+        <div class="bg-fab"></div>
+        <button type="button" class="btn-addevent" data-toggle="modal" data-target=".bd-example-modal-lg">Add New Event</button>
+
+        <button type="" class="btn-fab-on-sm" data-toggle="modal" data-target=".bd-example-modal-lg" style="display: none"><i class="fas fa-plus"></i></button>
+
+    </section>
+
+    <!-- Modal  (add event)-->
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add New Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+                <!-- Event name and Type -->
+                    <input type="text" name="" id="eventname" placeholder="Event Name">
+                    <br><br>
+                    <input type="text" name="" id="eventype" placeholder="Event Type">
+                    <br><br>
+                <!-- Event Descrip -->
+                    <textarea name="" id="eventdescrip" rows="5" placeholder="Event Description"></textarea>
+                    <br><br>
+                <!-- Rulebook -->
+                <input type="text" name="" id="rulebookurl" placeholder="Rulebook Url">
+                <br><br>
+                <!-- Categories -->
+                <h5>Categories:</h5>
+                <div class="cat-input">
+                    <i class="fas fa-plus"></i>
+                    <input type="text" name="" id="category">
+                </div>
+                <br>
+                <div class="cat-tags">
+                    <!-- <div class="tag">
+                        <div class="text">Lectures</div>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="tag">
+                        <div class="text">Higher Studies</div>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="tag">
+                        <div class="text">GRE</div>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="tag">
+                        <div class="text">Conferences</div>
+                        <i class="fas fa-times"></i>
+                    </div> -->
+                </div>
+                <br><br>
+                <!-- Days -->
+                <h5>Days:</h5>
+                <div class="day-input">
+                    <i class="fas fa-plus"></i>
+                    <div>
+                    <input type="text" name="" id="day" placeholder="Day">
+                    <input type="text" name="" id="session" placeholder="Session">
+                    <input type="time" name="" id="time" placeholder="Time">
+                    <input type="text" name="" id="venue" placeholder="Venue">
+                    </div>
+                </div>
+                <br>
+                <div class="day-tags">
+                    <!-- <div class="tag">
+                        <div>Day0:</div>
+                        <div>Elimination</div>
+                        <div>12:30</div>
+                        <div>Main-audi</div>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="tag">
+                        <div>Day1:</div>
+                        <div>Semi Finale</div>
+                        <div>9:45</div>
+                        <div>Nesci Lawns</div>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="tag">
+                        <div>Day2:</div>
+                        <div>Finale</div>
+                        <div>17:00</div>
+                        <div>Mini-audi</div>
+                        <i class="fas fa-times"></i>
+                    </div> -->
+                </div>
+
+                <!-- Footer -->
+
+              </div>
+              <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+
+                <input type="file" name="" id="chooseimg" style="display:none">
+                <label for="chooseimg" class="btn-chooseimg">Choose Image</label>
+
+                <img src="images/images.png" alt="" id="chosenimg">
+
+                <button type="button" class="btn btn-primary" id="addevent" data-dismiss="modal">Add Event</button>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Cards -->
+
+    <section class="cards wrap">
+        <div class="card">
+            <!-- Banner with event type and name -->
+            <img src="images/artificial-intelligence-electronics-future-2599244.jpg" alt="">
+            <div class="banner-lead">
+                <h2>Artificially Intelligent</h2>
+                <h4>Machine Learning</h4>
+            </div>
+            <hr class="hr1">
+
+            <!-- Event Description -->
+            <div class="wrap">
+                <p class="card-descrip">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni dolores praesentium quis iusto quo illum voluptatum veritatis reprehenderit laborum incidunt sit ipsa, a maiores aut nihil eligendi accusamus Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis explicabo qui iste! Ratione saepe sint inventore voluptatem. Est, quidem quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aut ea voluptates nihil facilis. Vero ab iusto totam facilis autem! </p>
+            </div>
+            <hr class="hr1">
+            <!-- Categories -->
+            <div class="wrap">
+                <h4>Categories:</h4>
+                <hr class="hr2">
+                <ul class="card-cats">
+                    <li>Lectures</li>
+                    <li>Higher Studies</li>
+                    <li>GRE</li>
+                    <li>Conferences</li>
+                </ul>
+                <hr class="hr2">
+            </div>
+            
+            <!-- Days -->
+            <div class="wrap">
+                <h4>Days:</h4>
+                <hr class="hr2">
+                <table class="card-days">
+                    <tr>
+                        <td>Day0:</td>
+                        <td>Introduction</td>
+                        <td>12:30</td>
+                        <td>Main-audi</td>
+                    </tr>
+                    <tr>
+                        <td>Day1:</td>
+                        <td>Advanced</td>
+                        <td>09:45</td>
+                        <td>Nesci Lawns</td>
+                    </tr>
+                </table>
+                <hr class="hr2">
+            </div>
+            <!-- Rulebook Url  -->
+            <div class="card-url">
+                        Rulebook Url: <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">https://en.wikipedia.org/wiki/Artificial_intelligence</a>
+            </div><br>
+            <hr class="hr1">
+            <!-- Footer (edit and del btn) -->
+            <section class="card-footer">
+                    <button type="button" class="btn btn-editevent mr-2" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-edit"></i> Edit Event</button>
+                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+            </section>
+        </div>
+        <div class="card">
+            <!-- Banner with event type and name -->
+            <img src="images/hand-indoors-lights-2752777.jpg" alt="">
+            <div class="banner-lead">
+                <h2>Stranger Observations</h2>
+                <h4>Quiz</h4>
+            </div>
+            <hr class="hr1">
+
+            <!-- Event Description -->
+            <div class="wrap">
+                <p class="card-descrip">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni dolores praesentium quis iusto quo illum voluptatum veritatis reprehenderit laborum incidunt sit ipsa, a maiores aut nihil eligendi accusamus necessitatibus perferendis. Ipsa labore facilis placeat similique incidunt aliquid hic, perferendis nulla.</p>
+            </div>
+            <hr class="hr1">
+            <!-- Categories -->
+            <div class="wrap">
+                <h4>Categories:</h4>
+                <hr class="hr2">
+                <ul class="card-cats">
+                    <li>TV series</li>
+                    <li>Movies</li>
+                    <li>Documentries</li>
+                    <li>Raw Facts</li>
+                </ul>
+                <hr class="hr2">
+            </div>
+            
+            <!-- Days -->
+            <div class="wrap">
+                <h4>Days:</h4>
+                <hr class="hr2">
+                <table class="card-days">
+                    <tr>
+                        <td>Day0:</td>
+                        <td>SKills</td>
+                        <td>02:30</td>
+                        <td>Main-audi</td>
+                    </tr>
+                    <tr>
+                        <td>Day2:</td>
+                        <td>General Knowledge</td>
+                        <td>10:00</td>
+                        <td>Nesci Lawns</td>
+                    </tr>
+                    <tr>
+                        <td>Day2:</td>
+                        <td>Finale</td>
+                        <td>17:00</td>
+                        <td>Mini-audi</td>
+                    </tr>
+                </table>
+                <hr class="hr2">
+            </div>
+            <!-- Rulebook Url  -->
+            <p class="card-url">
+                Rulebook Url: <a href="https://www.netflix.com/in/">https://www.netflix.com/in/</a>
+            </p><br>
+            <hr class="hr1">
+            <!-- Footer (edit and del btn) -->
+            <section class="card-footer">
+                    <button type="button" class="btn btn-editevent mr-2" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-edit"></i> Edit Event</button>
+                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+            </section>
+        </div>
+        <div class="card">
+            <!-- Banner with event type and name -->
+            <img src="images/beautiful-cellphone-cute-761963.jpg" alt="">
+            <div class="banner-lead">
+                <h2>Coming Soon</h2>
+                <h4>Silent DJ</h4>
+            </div>
+            <hr class="hr1">
+
+            <!-- Event Description -->
+            <div class="wrap">
+                <p class="card-descrip">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni dolores praesentium quis iusto quo illum voluptatum veritatis reprehenderit laborum incidunt sit ipsa, a maiores aut nihil eligendi accusamus necessitatibus perferendis. Ipsa labore facilis placeat similique incidunt aliquid hic, perferendis nulla.</p>
+            </div>
+            <hr class="hr1">
+            <!-- Categories -->
+            <div class="wrap">
+                <h4>Categories:</h4>
+                <hr class="hr2">
+                <ul class="card-cats">
+                    <li>Lectures</li>
+                    <li>Higher Studies</li>
+                    <li>GRE</li>
+                    <li>Conferences</li>
+                </ul>
+                <hr class="hr2">
+            </div>
+            
+            <!-- Days -->
+            <div class="wrap">
+                <h4>Days:</h4>
+                <hr class="hr2">
+                <table class="card-days">
+                    <tr>
+                        <td>Day0:</td>
+                        <td>Elimination</td>
+                        <td>12:30</td>
+                        <td>Main-audi</td>
+                    </tr>
+                    <tr>
+                        <td>Day1:</td>
+                        <td>Semi Finale</td>
+                        <td>09:45</td>
+                        <td>Nesci Lawns</td>
+                    </tr>
+                    <tr>
+                        <td>Day2:</td>
+                        <td>Finale</td>
+                        <td>17:00</td>
+                        <td>Mini-audi</td>
+                    </tr>
+                </table>
+                <hr class="hr2">
+            </div>
+            <!-- Rulebook Url  -->
+            <p class="card-url">
+                Rulebook Url: <a href="https://www.spotify.com/in/">https://www.spotify.com/in/</a>
+            </p><br>
+            <hr class="hr1">
+            <!-- Footer (edit and del btn) -->
+            <section class="card-footer">
+                    <button type="button" class="btn btn-editevent mr-2" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-edit"></i> Edit Event</button>
+                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</button>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="wrap">
+            <i class="fas fa-laptop-code fa-10x"></i>
+            <div class="div">
+                <h4 class="footer-content" id="about">About Me</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur velit, soluta ut, ex veniam magnam modi numquam ipsum deleniti qui voluptas, eum mollitia aperiam eligendi? Aperiam dicta commodi porro aliquid?</p>
+            </div>
+    </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
